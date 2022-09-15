@@ -5,6 +5,8 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
 
+    [SerializeField] private Animator unitAnimator;
+    private float rotateSpeed       = 20f;
     private Vector3 targetPosition;
 
     private void Update(){
@@ -18,12 +20,25 @@ public class Unit : MonoBehaviour
             Vector3 moveDirection   = (targetPosition - transform.position).normalized;
             float moveSpeed         = 4f;
             transform.position      += moveSpeed * Time.deltaTime * moveDirection;
+
+            // Rotate the unit to face the move direction smoothly
+            
+            transform.forward       = Vector3.Lerp(transform.forward, moveDirection, Time.deltaTime * rotateSpeed);
+
+            // Trigger walking animation
+            unitAnimator.SetBool("IsWalking", true);
+        }else{
+            
+            // Trigger not walking
+            unitAnimator.SetBool("IsWalking", false);
         }
 
-        if(Input.GetKeyDown(KeyCode.T)){
+        MouseWorld.ShowCursor();
+
+        if(Input.GetMouseButtonDown(0)){
             
             // Set the target position
-            Move(new Vector3(4, 0, 4));
+            Move(MouseWorld.GetPosition());
         }
     }
 
