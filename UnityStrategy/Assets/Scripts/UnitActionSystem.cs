@@ -28,16 +28,21 @@ public class UnitActionSystem : MonoBehaviour
     }
 
     private void Update(){
-        
-        
 
         if(Input.GetMouseButtonDown(0)){
             
             // Test for units being selected
             if(TryHandleUnitSelection()) return;
 
-            // Set the target position
-            selectedUnit.Move(MouseWorld.GetPosition());
+            GridPosition mouseGridPosition  = LevelGrid.Instance.GetGridPosition(MouseWorld.GetPosition());
+
+            if(selectedUnit.GetMoveAction().IsValidActionGridPosition(mouseGridPosition)){
+
+                // Set the target position
+                selectedUnit.GetMoveAction().Move(mouseGridPosition);
+            }
+
+            
         }
     }
 

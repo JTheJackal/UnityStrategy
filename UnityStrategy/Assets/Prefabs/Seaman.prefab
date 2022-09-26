@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1992763098007459467}
   - component: {fileID: 1992763098007459468}
   - component: {fileID: 2150851072879394331}
+  - component: {fileID: 3056243682215663869}
   m_Layer: 7
   m_Name: Seaman
   m_TagString: Untagged
@@ -47,7 +48,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5c0650f3804c6469ad7ed5c8e2ef74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitAnimator: {fileID: 7991295556490494988}
 --- !u!65 &2150851072879394331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61,6 +61,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6061829, y: 1.864697, z: 1}
   m_Center: {x: 0.0034830868, y: 0.90034723, z: 0}
+--- !u!114 &3056243682215663869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992763098007459466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b26276822722844a4b038ca260b6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitAnimator: {fileID: 7991295556490494988}
 --- !u!1 &5135698204937967391
 GameObject:
   m_ObjectHideFlags: 0
