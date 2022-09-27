@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1992763098007459468}
   - component: {fileID: 2150851072879394331}
   - component: {fileID: 3056243682215663869}
+  - component: {fileID: 4483164821666756897}
   m_Layer: 7
   m_Name: Seaman
   m_TagString: Untagged
@@ -74,6 +75,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitAnimator: {fileID: 7991295556490494988}
+  maxMoveDistance: 4
+--- !u!114 &4483164821666756897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992763098007459466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a38ae2015224f94a946c8ef22cd6c36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5135698204937967391
 GameObject:
   m_ObjectHideFlags: 0
