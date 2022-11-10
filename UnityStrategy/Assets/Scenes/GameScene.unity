@@ -1812,6 +1812,7 @@ MonoBehaviour:
   actionButtonPrefab: {fileID: 2228373125880396762, guid: d9285c3556597ce4bb3101e33c00aad7,
     type: 3}
   actionButtonContainerTransform: {fileID: 1240883472}
+  actionPointsText: {fileID: 919529934}
 --- !u!1 &1584989174
 GameObject:
   m_ObjectHideFlags: 0
